@@ -397,19 +397,26 @@ code {
 <p>Microsoft.PowerShell_profile.ps1</p>
 </blockquote>
 <p>We can add items to this script and they will run the next time we open a powershell terminal window.</p>
-<p><strong>e.g.</strong></p>
+<p>These items can be aliases, variables or functions.</p>
+<h3 id="examples">Examples</h3>
 <blockquote>
 <p>new-item alias:np -value &quot;C:\Program Files\Notepad++\notepad++.exe&quot;</p>
 </blockquote>
+<p>I can run this with <strong>np filename.txt</strong></p>
+<blockquote>
+<p>$NTIdentity = [Security.Principal.WindowsIdentity]::GetCurrent()</p>
+</blockquote>
+<p>Returns:</p>
+<p><img src="assets/images/master/ntidentity.jpg" alt="Identity values" title="Identity values"></p>
+<h2 id="useful-commands">Useful commands</h2>
 <h3 id="search-for-an-item-in-your-history">Search for an item in your history</h3>
 <pre class="hljs"><code><div>	<span class="hljs-built_in">Get-History</span> | <span class="hljs-built_in">Select-String</span> <span class="hljs-literal">-Pattern</span> <span class="hljs-string">"robocopy"</span>
 </div></code></pre>
-<h2 id="useful-commands">Useful commands</h2>
-<h3 id="function-getstartapps">function GetStartApps</h3>
+<h3 id="function-get-startapps">function Get-StartApps</h3>
 <pre class="hljs"><code><div>	<span class="hljs-built_in">Get-StartApps</span>
 </div></code></pre>
-<p>Will show you a list of all applications on your system</p>
-<pre class="hljs"><code><div>	GetStartApps *SQL*
+<p>Will show you a list of all applications on your system. You can also search for particular applications.</p>
+<pre class="hljs"><code><div>	<span class="hljs-built_in">Get-StartApps</span> *SQL*
 </div></code></pre>
 <p>Will show all apps with SQL in their name.</p>
 <blockquote>

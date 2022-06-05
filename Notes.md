@@ -40,9 +40,21 @@ The **directory** is where the profile is created and **Name** of the script is.
 
 We can add items to this script and they will run the next time we open a powershell terminal window.
 
-**e.g.**
+These items can be aliases, variables or functions.
+
+### Examples
 
 > new-item alias:np -value "C:\Program Files\Notepad++\notepad++.exe"
+
+I can run this with **np filename.txt**
+
+> $NTIdentity = [Security.Principal.WindowsIdentity]::GetCurrent()
+
+Returns:
+
+![Identity values](assets/images/master/ntidentity.jpg "Identity values")
+
+## Useful commands
 
 ### Search for an item in your history
 
@@ -50,18 +62,16 @@ We can add items to this script and they will run the next time we open a powers
 	Get-History | Select-String -Pattern "robocopy"
 ```
 
-## Useful commands
-
-### function GetStartApps
+### function Get-StartApps
 
 ```powershell
 	Get-StartApps
 ```
 
-Will show you a list of all applications on your system
+Will show you a list of all applications on your system. You can also search for particular applications.
 
 ```powershell
-	GetStartApps *SQL*
+	Get-StartApps *SQL*
 ```
 
 Will show all apps with SQL in their name.
