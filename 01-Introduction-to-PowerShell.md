@@ -237,4 +237,8 @@ You can't download the Help file if it has been downloaded less than 24 hours be
     Update-Help -Module DnsClient -Verbose -Force
 ```
 
-**Note:** you can also update the Help from a local directory, e.g. ``C:\Temp\PSHelp``. This is helpful for machines that don't have access to the Internet.
+You can also update the Help from a local directory. This is helpful for machines that don't have access to the Internet.
+
+```powershell
+    Update-Help -SourcePath C:\temp\PSHelp
+```
