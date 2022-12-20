@@ -108,3 +108,45 @@ Results:
 > G:       7630868 591597    7.75
 
 I have created a function named **drives** and it runs from my ``$Profile``.
+
+### Open Explorer
+
+Open the current Powershell directory
+
+```powershell
+	ii .
+```
+
+Or.
+
+```powershell
+	open .
+```
+
+Or.
+
+```powershell
+	start .
+```
+
+Or.
+
+```powershell
+	explorer .
+```
+
+If you want to change to another directory (this can also be on another drive).
+
+```powershell
+	open D:\Alan\Drives
+```
+
+### Minimising or maximising applications
+
+For example I have Notepad++ open in full screen. I can minimise it with the following keys.
+
+``Win + Down arrow``
+
+To maximise.
+
+``Win + Up arrow``
